@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SOVEREIGN CODEX • Ancient Wisdom for Those Who Refuse to Be Ruled</title>
+    <meta name="description" content="Volume I free. Volumes II–V sovereignty package — $99. Ancient wisdom for those who refuse to be ruled.">
+    <link rel="canonical" href="https://thesovereigncodex.com/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Instrument+Sans:wght@400;500;600&display=swap');
+        
+        :root {
+            --gold: #C9A46F;
+            --deep-red: #6B2D2D;
+        }
+        
+        body {
+            font-family: 'Instrument Sans', system-ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .dark-bg {
+            background-color: #0A0A0F;
+        }
+        
+        .section-bg {
+            background-color: #111114;
+        }
+
+        .gold {
+            color: #C9A46F;
+        }
+
+        .gold-bg {
+            background-color: #C9A46F;
+            color: #0A0A0F;
+        }
+
+        .ancient-border {
+            border: 1px solid #3A2F1F;
+            box-shadow: 0 0 0 1px #1F1A12;
+        }
+
+        .ornate {
+            position: relative;
+        }
+        
+        .ornate::before,
+        .ornate::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #C9A46F, transparent);
+        }
+        
+        .ornate::before { left: -50px; top: 50%; }
+        .ornate::after { right: -50px; top: 50%; }
+
+        .nav-scrolled {
+            background-color: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        .codex-card {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .codex-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+
+        .matrix-text {
+            font-feature-settings: "ss02";
+        }
+
+        .ancient-text {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .glow-gold {
+            box-shadow: 0 0 15px rgba(201, 164, 111, 0.3);
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #3A2F1F, transparent);
+        }
+
+        .modal {
+            animation: modalPop 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        @keyframes modalPop {
+            from { opacity: 0; transform: scale(0.96) translateY(8px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .sovereign-btn {
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sovereign-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(201 164 111 / 0.2);
+        }
+
+        .quote {
+            font-style: italic;
+            position: relative;
+        }
+        
+        .quote::before {
+            content: '“';
+            font-size: 6rem;
+            opacity: 0.1;
+            position: absolute;
+            left: -20px;
+            top: -30px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="dark-bg text-[#EDE4D7] overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 border-b border-[#2A2520] transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 flex items-center justify-center">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 3L33 10.5V25.5L18 33L3 25.5V10.5L18 3Z" stroke="#C9A46F" stroke-width="2"/>
+                            <path d="M18 12L27 16.5V25.5L18 30L9 25.5V16.5L18 12Z" fill="#C9A46F" fill-opacity="0.15"/>
+                            <circle cx="18" cy="18" r="4" fill="#C9A46F"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="heading-serif text-2xl tracking-[-1.5px] font-bold">SOVEREIGN</span>
+                        <span class="heading-serif text-2xl tracking-[-1.5px] text-[#C9A46F]">CODEX</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-x-10 text-sm tracking-[1px]">
+                    <a href="#lore" class="hover:text-[#C9A46F] transition-colors">THE LORE</a>
+                    <a href="#volumes" class="hover:text-[#C9A46F] transition-colors">THE VOLUMES</a>
+                    <a href="#visuals" class="hover:text-[#C9A46F] transition-colors">THE PAGES</a>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <button onclick="showFreeModal()"
+                            class="hidden md:block px-6 py-2.5 text-sm border border-[#C9A46F] hover:bg-[#C9A46F] hover:text-[#0A0A0F] transition-all rounded-full tracking-widest text-xs font-medium">
+                        GET VOLUME I FREE
+                    </button>
+                    <button onclick="showPurchaseModal()"
+                            class="px-7 py-2.5 bg-[#C9A46F] hover:bg-[#B38B4E] transition-all text-[#0A0A0F] text-sm font-semibold rounded-full tracking-widest flex items-center gap-x-2">
+                        <span>UNLOCK ALL 4 • $99</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative h-[100dvh] min-h-[700px] flex items-center justify-center pt-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-black">
+            <img src="images/hero.jpg" alt="The Sovereign Codex — seeker standing before the ancient tome and golden portal"
+                 class="w-full h-full object-cover opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#0A0A0F]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(#3A2F1F_0.8px,transparent_1px)] bg-[length:5px_5px] opacity-40"></div>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto px-6 text-center z-10">
+            <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full border border-[#3A2F1F] mb-6">
+                <div class="w-2 h-2 bg-[#C9A46F] rounded-full animate-pulse"></div>
+                <span class="text-xs tracking-[2px] text-[#C9A46F]">THE KNOWLEDGE THEY TRIED TO BURY HAS RETURNED</span>
+            </div>
+            
+            <h1 class="heading-serif text-[72px] md:text-[92px] leading-[0.92] tracking-[-4.5px] mb-4">
+                THE<br>SOVEREIGN<br>CODEX
+            </h1>
+            
+            <p class="max-w-md mx-auto text-xl md:text-2xl text-[#C9A46F] mb-10 tracking-tight">
+                Ancient wisdom for those who refuse to be ruled.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="showFreeModal()" 
+                        class="group w-full sm:w-auto px-10 py-4 border-2 border-[#C9A46F] hover:bg-[#C9A46F] hover:text-[#0A0A0F] transition-all rounded-2xl flex items-center justify-center gap-x-3 text-lg font-medium tracking-wider">
+                    <i class="fa-solid fa-download group-hover:scale-110 transition-transform"></i>
+                    <span>DOWNLOAD VOLUME I — FREE</span>
+                </button>
+                
+                <button onclick="showPurchaseModal()" 
+                        class="group w-full sm:w-auto px-10 py-4 bg-[#C9A46F] hover:bg-[#B38B4E] text-[#0A0A0F] transition-all rounded-2xl flex items-center justify-center gap-x-3 text-lg font-semibold tracking-wider shadow-xl shadow-[#C9A46F]/20">
+                    <span>GET VOLUMES II–V • $99</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+            
+            <div class="mt-8 flex justify-center">
+                <div class="flex items-center gap-x-2 text-xs tracking-widest text-[#8A7F6A]">
+                    <div class="h-px w-8 bg-[#3A2F1F]"></div>
+                    <span>5 VOLUMES • ONE PATH</span>
+                    <div class="h-px w-8 bg-[#3A2F1F]"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <span class="text-[10px] tracking-[3px] mb-1 text-[#8A7F6A]">SCROLL TO BEGIN</span>
+            <i class="fa-solid fa-chevron-down text-[#C9A46F] animate-bounce"></i>
+        </div>
+    </header>
+
+    <!-- LORE / WHAT IS THIS -->
+    <section id="lore" class="max-w-5xl mx-auto px-6 pt-20 pb-16">
+        <div class="grid md:grid-cols-12 gap-x-12 items-center">
+            <div class="md:col-span-7">
+                <div class="uppercase text-[#C9A46F] text-xs tracking-[3px] mb-3">THE TRUTH THEY HID</div>
+                <h2 class="heading-serif text-6xl md:text-7xl leading-none tracking-[-2.5px] mb-8">
+                    Most people live<br>inside a cage<br>they cannot see.
+                </h2>
+                
+                <div class="space-y-6 text-lg ancient-text text-[#C9B89A]">
+                    <p>The Sovereign Codex is not another self-help book. It is the map out.</p>
+                    <p>It carries the original knowing — the one that was buried, twisted, and locked away for centuries. Five volumes. One purpose: to help you remember who you really are and how to live completely free.</p>
+                    <p>Volume I is given freely because the first step should never cost anything. The rest is for those who are ready to go all the way.</p>
+                </div>
+            </div>
+            
+            <div class="md:col-span-5 mt-10 md:mt-0">
+                <div class="relative">
+                    <img src="images/manuscript.jpg" alt="The sovereign seeker — ancient wisdom behind the veil" 
+                         class="w-full rounded-2xl shadow-2xl border border-[#2A2520]">
+                    <div class="absolute -bottom-4 -right-4 bg-[#0A0A0F] px-5 py-3 rounded-xl border border-[#3A2F1F] text-sm">
+                        <span class="text-[#C9A46F]">“The cage was never locked from the outside.”</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-5xl mx-auto"></div>
+
+    <!-- THE VOLUMES -->
+    <section id="volumes" class="max-w-7xl mx-auto px-6 pt-16 pb-20">
+        <div class="text-center mb-12">
+            <div class="text-[#C9A46F] text-xs tracking-[3px]">THE COMPLETE TRANSMISSION</div>
+            <h2 class="heading-serif text-6xl tracking-[-2px] mt-2">Choose Your Path</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            <!-- VOLUME I - FREE -->
+            <div class="codex-card bg-[#111114] border border-[#2A2520] rounded-3xl overflow-hidden flex flex-col">
+                <div class="p-8 pb-0">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <div class="text-xs tracking-[2px] text-[#C9A46F]">VOLUME I</div>
+                            <div class="heading-serif text-4xl tracking-tight">THE GREAT DECEPTION</div>
+                        </div>
+                        <div class="px-4 py-1 bg-emerald-950 text-emerald-400 text-xs font-medium tracking-widest rounded-full border border-emerald-900">FREE</div>
+                    </div>
+                    
+                    <img src="images/codex-cover.jpg" alt="The Sovereign Codex Volume I — The Great Deception" 
+                         class="w-full rounded-2xl shadow-xl mb-8 border border-[#2A2520]">
+                    
+                    <div class="space-y-4 text-[#C9B89A]">
+                        <p class="text-lg">The first key. Understand the invisible cage around you and take your first real step out.</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#C9A46F] mt-1"></i> <span>See the matrix for what it truly is</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#C9A46F] mt-1"></i> <span>Why most people never wake up</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#C9A46F] mt-1"></i> <span>The first practical steps to sovereignty</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-auto p-8 pt-6 border-t border-[#2A2520]">
+                    <button onclick="showFreeModal()" 
+                            class="w-full py-4 bg-white hover:bg-[#EDE4D7] active:bg-white transition-all text-[#0A0A0F] font-semibold rounded-2xl flex items-center justify-center gap-x-3 text-lg tracking-wider">
+                        <i class="fa-solid fa-download"></i>
+                        <span>DOWNLOAD VOLUME I — FREE</span>
+                    </button>
+                    <p class="text-center text-xs text-[#8A7F6A] mt-3 tracking-wider">No email required • Instant access</p>
+                </div>
+            </div>
+
+            <!-- BUNDLE - $99 -->
+            <div class="codex-card bg-[#111114] border-2 border-[#C9A46F] rounded-3xl overflow-hidden flex flex-col relative">
+                <div class="absolute top-6 right-6 px-4 py-1 bg-[#C9A46F] text-[#0A0A0F] text-xs font-bold tracking-widest rounded-full">BEST VALUE</div>
+                
+                <div class="p-8">
+                    <div class="mb-6">
+                        <div class="text-xs tracking-[2px] text-[#C9A46F]">VOLUMES II — V</div>
+                        <div class="heading-serif text-4xl tracking-tight">THE PATH OF<br>ETERNAL DOMINION</div>
+                    </div>
+                    
+                    <div class="flex items-baseline gap-x-2 mb-6">
+                        <span class="text-6xl font-semibold tracking-tighter">$99</span>
+                        <span class="text-[#8A7F6A]">one-time</span>
+                    </div>
+                    
+                    <div class="space-y-5 text-[#C9B89A]">
+                        <div>
+                            <div class="font-medium text-[#EDE4D7] mb-2">What you receive:</div>
+                            <div class="grid grid-cols-1 gap-y-3 text-sm">
+                                <div class="flex gap-x-3"><span class="text-[#C9A46F] font-mono w-5 shrink-0">II</span> <span>Financial Sovereignty — Escaping the Debt Matrix and Building Independent Wealth</span></div>
+                                <div class="flex gap-x-3"><span class="text-[#C9A46F] font-mono w-5 shrink-0">III</span> <span>The Physical Exit — Land, Shelter, Water, Energy, and Food Independence</span></div>
+                                <div class="flex gap-x-3"><span class="text-[#C9A46F] font-mono w-5 shrink-0">IV</span> <span>The Invisible Citizen — Privacy, Anonymity, and Legal Invisibility</span></div>
+                                <div class="flex gap-x-3"><span class="text-[#C9A46F] font-mono w-5 shrink-0">V</span> <span>The Parallel Economy — Community, Health, Education, and Meaning Outside the System</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-[#2A2520]">
+                            <div class="text-sm">Once the veil lifts, the real work begins. Master your mind, energy, and reality itself.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-auto p-8 pt-4 border-t border-[#3A2F1F]">
+                    <button onclick="showPurchaseModal()" 
+                            class="w-full py-4 bg-[#C9A46F] hover:bg-[#B38B4E] active:bg-[#A67C4A] transition-all text-[#0A0A0F] font-bold rounded-2xl flex items-center justify-center gap-x-3 text-lg tracking-wider">
+                        <span>SECURE THE COMPLETE CODEX — $99</span>
+                    </button>
+                    <p class="text-center text-xs text-[#8A7F6A] mt-3">Instant digital access • Lifetime updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISUAL JOURNEY -->
+    <section id="visuals" class="bg-[#111114] py-16 border-y border-[#2A2520]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <div class="text-[#C9A46F] text-xs tracking-[3px]">PAGES FROM THE CODEX</div>
+                <h3 class="heading-serif text-5xl tracking-tight mt-1">A Glimpse Into the Transmission</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="group">
+                    <img src="images/sovereign-figure.jpg" alt="Breaking free from the matrix of money, chains, and distraction" 
+                         class="w-full aspect-[16/10] object-cover rounded-2xl border border-[#2A2520] group-hover:border-[#C9A46F] transition-all">
+                    <div class="mt-4 px-1">
+                        <div class="text-sm text-[#C9A46F]">THE BREAKING</div>
+                        <div class="text-[#C9B89A]">The moment the chains begin to dissolve.</div>
+                    </div>
+                </div>
+                <div class="group">
+                    <img src="images/golden-key.jpg" alt="The five keys of sovereignty" 
+                         class="w-full aspect-[16/10] object-cover rounded-2xl border border-[#2A2520] group-hover:border-[#C9A46F] transition-all">
+                    <div class="mt-4 px-1">
+                        <div class="text-sm text-[#C9A46F]">THE KEY</div>
+                        <div class="text-[#C9B89A]">It was always in your hand. You were simply taught not to see it.</div>
+                    </div>
+                </div>
+                <div class="group">
+                    <img src="images/manuscript.jpg" alt="The sovereign seeker — keeper of ancient knowledge" 
+                         class="w-full aspect-[16/10] object-cover rounded-2xl border border-[#2A2520] group-hover:border-[#C9A46F] transition-all">
+                    <div class="mt-4 px-1">
+                        <div class="text-sm text-[#C9A46F]">THE REMEMBERING</div>
+                        <div class="text-[#C9B89A]">Words written for those who were ready to hear them.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="max-w-5xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <div class="text-[#C9A46F] text-xs tracking-[3px]">FROM THOSE WHO HAVE READ</div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="border border-[#2A2520] p-7 rounded-3xl">
+                <div class="quote text-lg">"This didn't just change how I think. It changed what I see when I open my eyes in the morning."</div>
+                <div class="mt-6 text-sm text-[#8A7F6A]">— Marcus T., former executive</div>
+            </div>
+            <div class="border border-[#2A2520] p-7 rounded-3xl">
+                <div class="quote text-lg">"I've read hundreds of books on freedom and awakening. Nothing comes close to the clarity and direct power in these pages."</div>
+                <div class="mt-6 text-sm text-[#8A7F6A]">— Elena Voss, seeker &amp; creator</div>
+            </div>
+            <div class="border border-[#2A2520] p-7 rounded-3xl">
+                <div class="quote text-lg">"Volume I alone was worth everything. The rest of the Codex? It's not information. It's transmission."</div>
+                <div class="mt-6 text-sm text-[#8A7F6A]">— David K., entrepreneur</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="border-y border-[#2A2520] py-16 bg-[#111114]">
+        <div class="max-w-2xl mx-auto text-center px-6">
+            <div class="heading-serif text-5xl tracking-tight mb-4">The cage door is open.<br>Will you step through?</div>
+            <p class="text-[#C9B89A] mb-8">Most will keep scrolling. A few will remember who they are.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="showFreeModal()" 
+                        class="px-9 py-4 border border-[#C9A46F] hover:bg-[#C9A46F] hover:text-[#0A0A0F] transition-all rounded-2xl text-lg font-medium tracking-wider">
+                    Begin with Volume I — Free
+                </button>
+                <button onclick="showPurchaseModal()" 
+                        class="px-9 py-4 bg-[#C9A46F] hover:bg-[#B38B4E] text-[#0A0A0F] transition-all rounded-2xl text-lg font-semibold tracking-wider">
+                    Claim the Complete Codex — $99
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-3xl mx-auto px-6 py-16">
+        <div class="text-center mb-10">
+            <div class="text-[#C9A46F] text-xs tracking-[3px]">COMMON QUESTIONS</div>
+        </div>
+        
+        <div class="space-y-4">
+            <details class="border border-[#2A2520] rounded-2xl p-6 group">
+                <summary class="font-medium cursor-pointer flex justify-between items-center">Is this real ancient text?<span class="text-[#C9A46F] group-open:rotate-180 transition-transform">↓</span></summary>
+                <p class="mt-4 text-[#C9B89A]">It is a modern transmission of timeless knowing, written in clear language for those living today. The wisdom is ancient. The words are made for now.</p>
+            </details>
+            
+            <details class="border border-[#2A2520] rounded-2xl p-6 group">
+                <summary class="font-medium cursor-pointer flex justify-between items-center">Why is Volume I free?<span class="text-[#C9A46F] group-open:rotate-180 transition-transform">↓</span></summary>
+                <p class="mt-4 text-[#C9B89A]">Because the first step should never be blocked by money. We want as many people as possible to begin waking up.</p>
+            </details>
+            
+            <details class="border border-[#2A2520] rounded-2xl p-6 group">
+                <summary class="font-medium cursor-pointer flex justify-between items-center">What happens after I buy the bundle?<span class="text-[#C9A46F] group-open:rotate-180 transition-transform">↓</span></summary>
+                <p class="mt-4 text-[#C9B89A]">You receive instant access to all four advanced volumes. Digital delivery. Private. No fluff. Pure transmission.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-[#2A2520] py-12 text-center text-xs text-[#8A7F6A]">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex justify-center mb-4">
+                <div class="flex items-center gap-x-2 text-[#C9A46F]">
+                    <svg width="18" height="18" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 3L33 10.5V25.5L18 33L3 25.5V10.5L18 3Z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="tracking-widest">THE SOVEREIGN CODEX</span>
+                </div>
+            </div>
+            <p>© 2026 • For those ready to remember. All rights reserved.</p>
+            <p class="mt-2 max-w-xs mx-auto">This knowledge carries responsibility. Use it to build, not to harm.</p>
+        </div>
+    </footer>
+
+    <!-- FREE DOWNLOAD MODAL -->
+    <div id="freeModal" onclick="if (event.target.id === 'freeModal') hideFreeModal()" class="hidden fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-[#111114] border border-[#3A2F1F] max-w-2xl w-full rounded-3xl overflow-hidden">
+            <div class="p-9">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <div class="text-emerald-400 text-xs tracking-[2px]">WELCOME, SEEKER</div>
+                        <div class="heading-serif text-4xl tracking-tight">The Great Deception is yours.</div>
+                    </div>
+                    <button onclick="hideFreeModal()" class="text-3xl leading-none text-[#8A7F6A] hover:text-white">&times;</button>
+                </div>
+                
+                <div class="my-8 p-6 bg-[#0A0A0F] border border-[#2A2520] rounded-2xl text-[#C9B89A]">
+                    <p class="italic">"The moment you see the cage is the moment you begin to leave it. Most never look. You just did."</p>
+                    <p class="text-right mt-4 text-sm">— From Volume I</p>
+                </div>
+                
+                <div class="text-center">
+                    <button onclick="downloadVolumeOne()" 
+                            class="w-full py-4 bg-emerald-600 hover:bg-emerald-500 transition-all text-white font-semibold rounded-2xl flex items-center justify-center gap-x-3 text-lg">
+                        <i class="fa-solid fa-download"></i>
+                        <span>DOWNLOAD VOLUME I PDF</span>
+                    </button>
+                    <p class="text-xs text-[#8A7F6A] mt-3">Instant download. No email required.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PURCHASE MODAL -->
+    <div id="purchaseModal" onclick="if (event.target.id === 'purchaseModal') hidePurchaseModal()" class="hidden fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-[#111114] border border-[#C9A46F] max-w-md w-full rounded-3xl overflow-hidden">
+            <div class="p-8">
+                <div class="flex justify-between mb-6">
+                    <div>
+                        <div class="text-[#C9A46F] text-xs tracking-[2px]">THE COMPLETE PATH</div>
+                        <div class="heading-serif text-3xl">Volumes II–V</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-3xl font-semibold">$99</div>
+                        <div class="text-xs text-[#8A7F6A]">one time</div>
+                    </div>
+                </div>
+                
+                <div id="checkoutForm">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-xs tracking-widest text-[#8A7F6A]">YOUR NAME</label>
+                            <input id="buyerName" type="text" placeholder="Your name" class="w-full bg-[#0A0A0F] border border-[#2A2520] rounded-xl px-4 py-3 mt-1 focus:outline-none focus:border-[#C9A46F]">
+                        </div>
+                        <div>
+                            <label class="text-xs tracking-widest text-[#8A7F6A]">EMAIL FOR DELIVERY</label>
+                            <input id="buyerEmail" type="email" placeholder="you@yourmail.com" class="w-full bg-[#0A0A0F] border border-[#2A2520] rounded-xl px-4 py-3 mt-1 focus:outline-none focus:border-[#C9A46F]">
+                        </div>
+                    </div>
+                    
+                    <button onclick="processPurchase()" 
+                            class="mt-6 w-full py-4 bg-[#C9A46F] hover:bg-[#B38B4E] text-[#0A0A0F] font-bold rounded-2xl flex items-center justify-center gap-x-2 text-lg tracking-wider">
+                        COMPLETE SECURE PAYMENT
+                    </button>
+                    
+                    <p id="checkoutNote" class="text-center text-[10px] text-[#8A7F6A] mt-4">Connect your Gumroad or Stripe link in site-config.js for live checkout.</p>
+                </div>
+                
+                <div id="purchaseSuccess" class="hidden text-center py-4">
+                    <i class="fa-solid fa-check-circle text-5xl text-emerald-400 mb-4"></i>
+                    <div class="heading-serif text-2xl mb-2">Welcome to the inner circle.</div>
+                    <p class="text-[#C9B89A]">Your complete Codex (Volumes II–V) has been sent to your email.</p>
+                    <p class="text-xs mt-6 text-[#8A7F6A]">You now hold the full transmission.<br>Use it well, Sovereign.</p>
+                    
+                    <button onclick="hidePurchaseModal()" 
+                            class="mt-8 px-8 py-3 border border-[#C9A46F] hover:bg-[#C9A46F] hover:text-[#0A0A0F] transition-all rounded-2xl text-sm tracking-widest">
+                        RETURN TO THE CODEX
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="site-config.js"></script>
+    <script>
+        const config = window.SOVEREIGN_CODEX || {};
+        
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent-gold', '#C9A46F');
+        }
+        
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('nav-scrolled', 'shadow-xl');
+                } else {
+                    navbar.classList.remove('nav-scrolled', 'shadow-xl');
+                }
+            });
+        }
+        
+        function showFreeModal() {
+            document.getElementById('freeModal').classList.remove('hidden');
+            document.getElementById('freeModal').classList.add('flex');
+        }
+        
+        function hideFreeModal() {
+            const modal = document.getElementById('freeModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+        
+        function downloadVolumeOne() {
+            const url = config.volumeIFreeDownload || '/downloads/volume-i-the-great-deception.pdf';
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Sovereign_Codex_Volume_I_The_Great_Deception.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            setTimeout(hideFreeModal, 1200);
+        }
+        
+        function showPurchaseModal() {
+            document.getElementById('purchaseModal').classList.remove('hidden');
+            document.getElementById('purchaseModal').classList.add('flex');
+            document.getElementById('checkoutForm').classList.remove('hidden');
+            document.getElementById('purchaseSuccess').classList.add('hidden');
+        }
+        
+        function hidePurchaseModal() {
+            const modal = document.getElementById('purchaseModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+        
+        function processPurchase() {
+            const gumroadUrl = config.gumroadVolumesIIVUrl;
+            if (gumroadUrl) {
+                window.open(gumroadUrl, '_blank', 'noopener');
+                hidePurchaseModal();
+                return;
+            }
+
+            const form = document.getElementById('checkoutForm');
+            const success = document.getElementById('purchaseSuccess');
+            
+            form.style.transition = 'all 0.3s';
+            form.style.opacity = '0';
+            
+            setTimeout(() => {
+                form.classList.add('hidden');
+                success.classList.remove('hidden');
+                success.style.opacity = '0';
+                success.style.transition = 'all 0.4s';
+                
+                setTimeout(() => {
+                    success.style.opacity = '1';
+                }, 50);
+            }, 350);
+        }
+        
+        function initKeyboardControls() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const freeModal = document.getElementById('freeModal');
+                    const purchaseModal = document.getElementById('purchaseModal');
+                    
+                    if (!freeModal.classList.contains('hidden') && freeModal.classList.contains('flex')) {
+                        hideFreeModal();
+                    } else if (!purchaseModal.classList.contains('hidden') && purchaseModal.classList.contains('flex')) {
+                        hidePurchaseModal();
+                    }
+                }
+            });
+        }
+        
+        function initializeSite() {
+            initializeTailwind();
+            initNavbar();
+            initKeyboardControls();
+            console.log('%c[Sovereign Codex] Ready.', 'color:#C9A46F');
+        }
+        
+        window.onload = initializeSite;
+    </script>
+</body>
+</html>
