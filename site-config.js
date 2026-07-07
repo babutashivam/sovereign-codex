@@ -2,6 +2,6 @@
 window.SOVEREIGN_CODEX = {
   siteUrl: 'https://thesovereigncodex.com',
   volumeIFreeDownload: '/downloads/volume-i-the-great-deception.pdf',
-  // Paste your Gumroad link for Volumes II–V package ($99) below:
-  gumroadVolumesIIVUrl: '',
+  // Gumroad link for Volumes II–V package ($77)
+  gumroadVolumesIIVUrl: 'https://sovereigncode8.gumroad.com/l/nxyoz',
 };

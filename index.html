@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE SOVEREIGN CODEX • Ancient Wisdom for Those Who Refuse to Be Ruled</title>
-    <meta name="description" content="Volume I free. Volumes II–V sovereignty package — $99. Ancient wisdom for those who refuse to be ruled.">
+    <meta name="description" content="Volume I free. Volumes II–V sovereignty package — $77. Ancient wisdom for those who refuse to be ruled.">
     <link rel="canonical" href="https://thesovereigncodex.com/">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -170,7 +170,7 @@
                     </button>
                     <button onclick="showPurchaseModal()"
                             class="px-7 py-2.5 bg-[#C9A46F] hover:bg-[#B38B4E] transition-all text-[#0A0A0F] text-sm font-semibold rounded-full tracking-widest flex items-center gap-x-2">
-                        <span>UNLOCK ALL 4 • $99</span>
+                        <span>UNLOCK ALL 4 • $77</span>
                     </button>
                 </div>
             </div>
@@ -210,7 +210,7 @@
                 
                 <button onclick="showPurchaseModal()" 
                         class="group w-full sm:w-auto px-10 py-4 bg-[#C9A46F] hover:bg-[#B38B4E] text-[#0A0A0F] transition-all rounded-2xl flex items-center justify-center gap-x-3 text-lg font-semibold tracking-wider shadow-xl shadow-[#C9A46F]/20">
-                    <span>GET VOLUMES II–V • $99</span>
+                    <span>GET VOLUMES II–V • $77</span>
                     <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                 </button>
             </div>
@@ -304,7 +304,7 @@
                 </div>
             </div>
 
-            <!-- BUNDLE - $99 -->
+            <!-- BUNDLE - $77 -->
             <div class="codex-card bg-[#111114] border-2 border-[#C9A46F] rounded-3xl overflow-hidden flex flex-col relative">
                 <div class="absolute top-6 right-6 px-4 py-1 bg-[#C9A46F] text-[#0A0A0F] text-xs font-bold tracking-widest rounded-full">BEST VALUE</div>
                 
@@ -315,7 +315,7 @@
                     </div>
                     
                     <div class="flex items-baseline gap-x-2 mb-6">
-                        <span class="text-6xl font-semibold tracking-tighter">$99</span>
+                        <span class="text-6xl font-semibold tracking-tighter">$77</span>
                         <span class="text-[#8A7F6A]">one-time</span>
                     </div>
                     
@@ -339,7 +339,7 @@
                 <div class="mt-auto p-8 pt-4 border-t border-[#3A2F1F]">
                     <button onclick="showPurchaseModal()" 
                             class="w-full py-4 bg-[#C9A46F] hover:bg-[#B38B4E] active:bg-[#A67C4A] transition-all text-[#0A0A0F] font-bold rounded-2xl flex items-center justify-center gap-x-3 text-lg tracking-wider">
-                        <span>SECURE THE COMPLETE CODEX — $99</span>
+                        <span>SECURE THE COMPLETE CODEX — $77</span>
                     </button>
                     <p class="text-center text-xs text-[#8A7F6A] mt-3">Instant digital access • Lifetime updates</p>
                 </div>
@@ -419,7 +419,7 @@
                 </button>
                 <button onclick="showPurchaseModal()" 
                         class="px-9 py-4 bg-[#C9A46F] hover:bg-[#B38B4E] text-[#0A0A0F] transition-all rounded-2xl text-lg font-semibold tracking-wider">
-                    Claim the Complete Codex — $99
+                    Claim the Complete Codex — $77
                 </button>
             </div>
         </div>
@@ -504,7 +504,7 @@
                         <div class="heading-serif text-3xl">Volumes II–V</div>
                     </div>
                     <div class="text-right">
-                        <div class="text-3xl font-semibold">$99</div>
+                        <div class="text-3xl font-semibold">$77</div>
                         <div class="text-xs text-[#8A7F6A]">one time</div>
                     </div>
                 </div>
@@ -526,7 +526,7 @@
                         COMPLETE SECURE PAYMENT
                     </button>
                     
-                    <p id="checkoutNote" class="text-center text-[10px] text-[#8A7F6A] mt-4">Connect your Gumroad or Stripe link in site-config.js for live checkout.</p>
+                    <p id="checkoutNote" class="text-center text-[10px] text-[#8A7F6A] mt-4">Secure checkout powered by Gumroad.</p>
                 </div>
                 
                 <div id="purchaseSuccess" class="hidden text-center py-4">
@@ -586,6 +586,12 @@
         }
         
         function showPurchaseModal() {
+            const gumroadUrl = config.gumroadVolumesIIVUrl;
+            if (gumroadUrl) {
+                window.open(gumroadUrl, '_blank', 'noopener');
+                return;
+            }
+
             document.getElementById('purchaseModal').classList.remove('hidden');
             document.getElementById('purchaseModal').classList.add('flex');
             document.getElementById('checkoutForm').classList.remove('hidden');
